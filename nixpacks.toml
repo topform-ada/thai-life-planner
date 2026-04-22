@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs_20", "python3", "gcc"]
+
+[phases.install]
+cmds = ["npm ci"]
+
+[phases.build]
+cmds = ["npm run build:all"]
+
+[start]
+cmd = "node dist-server/server.cjs"
